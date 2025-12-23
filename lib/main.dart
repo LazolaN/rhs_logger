@@ -842,7 +842,7 @@ class _MonitorScreenState extends State<MonitorScreen> {
               : Row(mainAxisAlignment: MainAxisAlignment.center, children: [Icon(state.autoModeEnabled ? Icons.lock : (state.isLogging ? Icons.stop : Icons.play_arrow)), const SizedBox(width: 8), Text(state.autoModeEnabled ? 'Auto Mode Active' : (state.isLogging ? 'Stop Monitoring' : 'Start Monitoring'), style: GoogleFonts.dmSans(fontSize: 16, fontWeight: FontWeight.w700))]),
           )),
           const SizedBox(height: 12),
-          Text(state.autoModeEnabled ? (state.isLogging ? 'Analyzing road conditions...' : 'Drive to auto-start monitoring') : 'Every drive improves the map', textAlign: TextAlign.center, style: GoogleFonts.dmSans(fontSize: 13, color: RHSColors.textSecondary, fontStyle: FontStyle.italic)),
+          Text(state.autoModeEnabled ? (state.isLogging ? 'Road Health AI is Analyzing road conditions...' : 'Drive to auto-start monitoring') : 'Every drive improves our map', textAlign: TextAlign.center, style: GoogleFonts.dmSans(fontSize: 13, color: RHSColors.textSecondary, fontStyle: FontStyle.italic)),
           const SizedBox(height: 24),
           if (state.events.isNotEmpty) ...[
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [Text('Recent Detections', style: GoogleFonts.dmSans(fontWeight: FontWeight.w700, color: RHSColors.textPrimary)), Text('${state.events.length} total', style: GoogleFonts.dmSans(fontSize: 13, color: RHSColors.textSecondary))]),
