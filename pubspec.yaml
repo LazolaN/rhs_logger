@@ -1,5 +1,5 @@
-name: rhs_logger
-description: Road Health - Crowdsourced road monitoring application
+name: road_health
+description: Municipal-grade road condition intelligence via crowdsourced sensing and AI.
 publish_to: 'none'
 version: 2.0.0+1
 
@@ -9,49 +9,47 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  # UI & Design
+  google_fonts: ^6.1.0
   
-  # Sensor data collection
-  sensors_plus: ^5.0.1
-  
-  # GPS location tracking
+  # Sensors & Location
+  sensors_plus: ^4.0.2
   geolocator: ^11.0.0
-  
-  # Background task execution
-  flutter_foreground_task: ^8.0.0
-  
-  # File storage
-  path_provider: ^2.1.2
-  
-  # Permissions
   permission_handler: ^11.3.0
   
-  # Audio feedback
-  audioplayers: ^6.0.0
+  # Background Processing
+  flutter_foreground_task: ^8.0.0
   
-  # File sharing
-  share_plus: ^7.2.2
-  
-  # Camera functionality
+  # Camera & Vision
   camera: ^0.10.5+9
-  
-  # Google ML Kit for pothole detection
   google_mlkit_image_labeling: ^0.11.0
   
-  # FIXED: Added missing dependencies
-  google_fonts: ^6.1.0
+  # Storage & Data
+  path_provider: ^2.1.2
   shared_preferences: ^2.2.2
+  
+  # Audio & Haptics (haptics via flutter/services.dart)
+  audioplayers: ^5.2.1
+  
+  # Sharing & Export
+  share_plus: ^7.2.2
+  
+  # Maps (NEW for V2)
+  flutter_map: ^6.1.0
+  latlong2: ^0.9.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^3.0.1
 
 flutter:
   uses-material-design: true
   
   assets:
-    - assets/images/
-    - assets/sounds/  # Optional: for custom audio alerts
+    - assets/sounds/
+    - assets/images/ # Optional: for custom audio alerts
 
 flutter_launcher_icons:
   android: true
